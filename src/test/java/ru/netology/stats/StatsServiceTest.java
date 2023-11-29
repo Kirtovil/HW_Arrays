@@ -28,8 +28,8 @@ public class StatsServiceTest {
     @Test
     void testMaxMonthService (){
         StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expected = 8;
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 20};
+        int expected = 12;
         int actual = service.maxSaleManth(sales);
         Assertions.assertEquals(expected, actual);
 
@@ -38,8 +38,8 @@ public class StatsServiceTest {
     @Test
     void testMInMonthService (){
         StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expected = 9;
+        int[] sales = {0, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int expected = 1;
         int actual = service.minSaleManth(sales);
         Assertions.assertEquals(expected, actual);
 
