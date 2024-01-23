@@ -4,8 +4,8 @@ package ru.netology.stats;
 public class StatsService {
 
     public int sumAllSales(int[] sales) {
-        int allSales = 0;
 
+        int allSales = 0;
         for (int i = 0; i < sales.length; i++) {
             allSales = allSales + sales[i];
         }
@@ -41,10 +41,11 @@ public class StatsService {
     }
 
     public int belowAverageSumAllSales (int[] sales){
-        int sumMonths = 0;
 
+        int sumMonths = 0;
+        int averageSum = averageSumAllSales(sales);
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] < averageSumAllSales(sales)) {
+            if (sales[i] < averageSum) {
                 sumMonths++;
             }
         }
@@ -54,8 +55,9 @@ public class StatsService {
     public int aboveAverageSumAllSales (int[] sales){
         int sumMonths = 0;
 
+        int averageSum = averageSumAllSales(sales);
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] > averageSumAllSales(sales)) {
+            if (sales[i] > averageSum) {
                 sumMonths++;
             }
         }
